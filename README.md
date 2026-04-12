@@ -1,9 +1,9 @@
-# Realtime Data Streaming and Processing Project
+# Gerçek Zamanlı Veri Akışı ve İşleme Projesi
 
-## Project Description
-This project is a real-time data streaming and processing application developed for the Cloud Computing course. In this project, sensor data is simulated and transmitted in real time using WebSocket technology. The incoming data is analyzed, stored in MongoDB, and sent to AWS for cloud-side processing.
+## Proje Açıklaması
+Bu proje, Bulut Bilişim dersi kapsamında geliştirilmiş bir gerçek zamanlı veri akışı ve işleme uygulamasıdır. Bu projede sensör verileri simüle edilerek WebSocket teknolojisi ile gerçek zamanlı olarak iletilmiştir. Gelen veriler analiz edilmiş, MongoDB üzerinde saklanmış ve AWS platformuna gönderilerek bulut tarafında işlenmiştir.
 
-## Technologies Used
+## Kullanılan Teknolojiler
 - Node.js
 - WebSocket (ws)
 - MongoDB Atlas
@@ -11,46 +11,46 @@ This project is a real-time data streaming and processing application developed 
 - AWS API Gateway
 - Git & GitHub
 
-## Project Features
-- Real-time sensor data simulation
-- WebSocket-based data transmission
-- Temperature and humidity analysis
-- High temperature alert system
-- Data storage in MongoDB
-- Cloud integration with AWS
+## Proje Özellikleri
+- Gerçek zamanlı sensör verisi simülasyonu
+- WebSocket ile veri iletimi
+- Sıcaklık ve nem analizi
+- Yüksek sıcaklık uyarı sistemi
+- Verilerin MongoDB’de saklanması
+- AWS ile bulut entegrasyonu
 
-## Project Workflow
-1. A simulated client generates temperature and humidity data.
-2. The client sends this data to the server through WebSocket.
-3. The server receives and analyzes the incoming data.
-4. The last 10 data points are used to calculate average temperature and humidity.
-5. If temperature exceeds the threshold, an alert is produced.
-6. The data is stored in MongoDB Atlas.
-7. The same data is sent to AWS API Gateway and processed by AWS Lambda.
+## Proje Akışı
+1. Client tarafında sensör verisi (sıcaklık ve nem) üretilir  
+2. Bu veriler WebSocket ile server’a gönderilir  
+3. Server gelen verileri analiz eder  
+4. Son 10 veri üzerinden ortalama hesaplanır  
+5. Belirli eşik aşılırsa uyarı verilir  
+6. Veriler MongoDB Atlas’a kaydedilir  
+7. Aynı veriler AWS API Gateway üzerinden Lambda’ya gönderilir  
 
-## Files
-- client.js → Simulates IoT/sensor data
-- server.js → Receives, analyzes, stores, and forwards data
-- package.json → Project dependencies and metadata
+## Dosyalar
+- client.js → Sensör verisi simülasyonu yapar  
+- server.js → Veriyi alır, analiz eder, kaydeder ve AWS’e gönderir  
+- package.json → Proje bağımlılıklarını içerir  
 
-## How to Run
+## Çalıştırma Adımları
 
-### 1. Install dependencies
+### 1. Bağımlılıkları yükle
 npm install
 
-### 2. Start the server
+### 2. Server’ı başlat
 node server.js
 
-### 3. Start the client
+### 3. Client’ı başlat
 node client.js
 
-## Output
-The system produces:
-- Real-time incoming sensor data
-- Average temperature and humidity values
-- High temperature alerts
-- MongoDB storage logs
-- AWS transmission logs
+## Çıktılar
+Sistem aşağıdaki çıktıları üretir:
+- Gerçek zamanlı sensör verisi
+- Ortalama sıcaklık ve nem değerleri
+- Yüksek sıcaklık uyarıları
+- MongoDB kayıt logları
+- AWS gönderim logları
 
-## Purpose
-The purpose of this project is to learn how real-time data can be collected, processed, analyzed, stored, and integrated with cloud technologies in a simple but practical way.
+## Amaç
+Bu projenin amacı, gerçek zamanlı verilerin nasıl üretildiğini, işlendiğini, analiz edildiğini, saklandığını ve bulut sistemlerine entegre edildiğini basit ve anlaşılır bir şekilde göstermektir.

@@ -9,10 +9,34 @@ const server = new WebSocket.Server({ port: 3000 });
 let dataList = [];
 let sensorCollection;
 
+async function sendToAWS(data, avgTemp, avgHum) {
+    try {
+        const response = await fetch('https://pkvz3qab5a.execute-api.eu-north-1.amazonaws.com/process', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                sensorData: data,
+                analysis: {
+                    averageTemperature: avgTemp,
+                    averageHumidity: avgHum
+                }
+            })
+        });
+
+        const result = await response.text();
+        console.log("Sent to AWS:", result);
+    } catch (error) {
+        console.error("AWS send error:", error.message);
+    }
+}
+
 async function startApp() {
     try {
         await client.connect();
         console.log("Connected to MongoDB");
+        console.log("Connected to AWS endpoint ready");
 
         const db = client.db("realtime_data");
         sensorCollection = db.collection("sensor_readings");
@@ -50,6 +74,8 @@ async function startApp() {
                         receivedAt: new Date()
                     });
 
+                    await sendToAWS(data, avgTemp, avgHum);
+
                     console.log("---- ANALYSIS ----");
                     console.log("Last Data:", data);
                     console.log("Average Temp:", avgTemp);
@@ -71,7 +97,7 @@ async function startApp() {
             });
         });
     } catch (error) {
-        console.error("MongoDB connection error:", error);
+        console.error("Startup error:", error);
     }
 }
 

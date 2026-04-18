@@ -1,5 +1,10 @@
 # Gerçek Zamanlı Veri Akışı ve İşleme Projesi
 
+Canlı Site (GitHub Pages)
+
+Detaylı Anlatım Vidyosu (Youtube)
+https://youtu.be/XYBt8NOEdLI
+
 ## Proje Açıklaması
 Bu proje, Bulut Bilişim dersi kapsamında geliştirilmiş bir gerçek zamanlı veri akışı ve işleme uygulamasıdır. Bu projede sensör verileri simüle edilerek WebSocket teknolojisi ile gerçek zamanlı olarak iletilmiştir. Gelen veriler analiz edilmiş, MongoDB üzerinde saklanmış ve AWS platformuna gönderilerek bulut tarafında işlenmiştir.
 
@@ -54,9 +59,3 @@ Sistem aşağıdaki çıktıları üretir:
 
 ## Amaç
 Bu projenin amacı, gerçek zamanlı verilerin nasıl üretildiğini, işlendiğini, analiz edildiğini, saklandığını ve bulut sistemlerine entegre edildiğini basit ve anlaşılır bir şekilde göstermektir.
-
-Canlı Site (GitHub Pages)
-https://yalcingulsen.github.io/site-kurulumu-blm2537/
-
-Detaylı Anlatım Vidyosu (Youtube)
-https://youtu.be/Ie57k_Gc6GA

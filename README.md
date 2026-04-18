@@ -1,6 +1,7 @@
 # Gerçek Zamanlı Veri Akışı ve İşleme Projesi
 
 Canlı Site (GitHub Pages)
+https://github.com/yalcingulsen/realtime-project
 
 Detaylı Anlatım Vidyosu (Youtube)
 https://youtu.be/XYBt8NOEdLI

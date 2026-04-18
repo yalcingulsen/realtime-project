@@ -54,3 +54,9 @@ Sistem aşağıdaki çıktıları üretir:
 
 ## Amaç
 Bu projenin amacı, gerçek zamanlı verilerin nasıl üretildiğini, işlendiğini, analiz edildiğini, saklandığını ve bulut sistemlerine entegre edildiğini basit ve anlaşılır bir şekilde göstermektir.
+
+Canlı Site (GitHub Pages)
+https://yalcingulsen.github.io/site-kurulumu-blm2537/
+
+Detaylı Anlatım Vidyosu (Youtube)
+https://youtu.be/Ie57k_Gc6GA
